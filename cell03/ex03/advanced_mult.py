@@ -1,13 +1,9 @@
-import sys
-i,j = 0,0
-if len(sys.argv) > 1:
-    print("none")
-    exit()
-while i <= 10: 
+i = 0
+while i <= 10:
+    multiply = ""
     j = 0
-    print(f"Table de {i}: " ,end="")
     while j <= 10:
-        print(f"{i * j}", end=" ")
+        multiply += f" {i*j}"
         j += 1
-    print()
+    print(f"Table de {i} :{multiply}")
     i += 1
