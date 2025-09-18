@@ -1,10 +1,12 @@
+import re
 import sys
 
-item_list = sys.argv[1:]
+args = sys.argv[1:]
 
-if len(item_list) <= 1:
+if len(args) != 2:
     print("none")
 else:
-    word = item_list[0]
-    count = item_list.count(word)
-    print(count)
+    pattern = args[0]
+    sentence = args[1]
+    matches = re.findall(pattern, sentence)
+    print(len(matches))
